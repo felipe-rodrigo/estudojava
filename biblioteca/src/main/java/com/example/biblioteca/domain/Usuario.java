@@ -1,16 +1,19 @@
-package main.java.com.example.biblioteca.controller;
+package com.example.biblioteca.domain;
 
 import java.sql.Date;
 
-import org.springframework.boot.autoconfigure.domain.Entity;
-import spring.persistence.GenerationType;
+import jakarta.persistence.GenerationType;
 import jakarta.annotation.Generated;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
 @Entity
 public class Usuario {
 
-  @Id 
-  @GeneratedValue(strategy=Generated.IDENTITY)
+  @Id    
+  @GeneratedValue(strategy = Generated.IDENTITY)
   @Column()
   private int id;
   private String nome;
