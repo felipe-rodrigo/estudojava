@@ -1,13 +1,20 @@
 package com.lanchonete.pedidos.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import java.util.List;
+import com.lanchonete.pedidos.domain.Pedidos;
+import com.lanchonete.pedidos.service.PedidosService;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
-@RequestMapping("/lanchonete")
 public class PedidosController {
-  @RequestMapping("/pedidos")
-  public String listarPedidos() {
-    return "Lista de pedidos";
+  
+  PedidosService pedidosService;
+
+  // Endpoint para retornar todos os alunos
+  @GetMapping("/pedidos")
+  public List<Pedidos> getAllPedidos() {
+    return pedidosService.getAllPedidos();
   }
+
+
+  public Optional<> 
 }

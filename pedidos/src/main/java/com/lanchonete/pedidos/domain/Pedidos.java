@@ -13,23 +13,23 @@ public class Pedidos {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
+  private Long id;
   @Column(length = 30, nullable = false, unique = true)
   private String descricao;
   @Column(length = 30, nullable = false, unique = true)
   private double valor;
 
-  public Pedidos(int id, String descricao, double valor) {
+  public Pedidos(Long id, String descricao, double valor) {
     this.id = id;
     this.descricao = descricao;
     this.valor = valor;
   }
 
-  public int getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(int id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
