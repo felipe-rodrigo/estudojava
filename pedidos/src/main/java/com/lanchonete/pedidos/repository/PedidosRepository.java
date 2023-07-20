@@ -1,9 +1,8 @@
 package com.lanchonete.pedidos.repository;
 
+import com.lanchonete.pedidos.domain.Pedidos;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.lanchonete.pedidos.domain.Pedidos;
-
-public interface PedidosRepository extends JpaRepository<Pedidos, Long[]>{
+public interface PedidosRepository extends JpaRepository<Pedidos, Long>{
   
 }

@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.ArrayList;
 import com.lanchonete.pedidos.domain.Pedidos;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.lanchonete.pedidos.repository.PedidosRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class PedidosService {
@@ -22,12 +22,12 @@ public class PedidosService {
   }
 
   // Método para retornar um pedido especifico pelo ID (REQUISIÇÃO ESPECIFICA - SOMENTE UM)
-  public Optional<Pedidos> getPedido(Long[] id) {
+  public Optional<Pedidos> getPedido(Long id) {
     return pedidosRepository.findById(id);
   }
 
   // Método para adicionar um pedido
-  public void aicionarPedido(Pedidos pedidoAdd) {
+  public void adicionarPedido(Pedidos pedidoAdd) {
     pedidosRepository.save(pedidoAdd);
   }
 
@@ -42,6 +42,6 @@ public class PedidosService {
 
   // Método para deletar um pedido
   public void deletarPedido(Long id) {
-    pedidosRepository.deleteAllById(id);
+    pedidosRepository.deleteById(id);
   }
 }
